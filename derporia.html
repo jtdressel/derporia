@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- A project by James Robertson and James Dressel -->
+<!-- A project by James Dressel and James Robertson -->
 <style>
 	input
 	{
@@ -41,6 +41,21 @@
 </style>
 
 
+<script>
+function validateClaim(){
+var x=document.forms["assertionForm"]["claim"].value;
+if (x==null || x=="")
+  {
+  alert("A claim must be entered");
+  return false;
+  }
+}
+
+
+
+
+</script>
+
 <html>
 	<body>
 
@@ -57,7 +72,7 @@
 	<table border=1 align="center">
 	<tr>
 		<td>
-		<form action = "derp"><!--NEED TODO -->
+		<form name="assertionForm" action = "derp" onsubmit="return validateClaim()"><!--NEED TODO -->
 
 			<textarea autofocus="autofocus" cols="30" rows="1" name="claim">Enter your claim</textarea>
 		<br>
