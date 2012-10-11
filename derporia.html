@@ -2,20 +2,36 @@
 
 <!-- A project by James Robertson and James Dressel -->
 <style>
-body
-{
-background-color:#d0e4fe;
-}
-h1
-{
-text-align:center;
-}
-p
-{
-text-align:center;
-font-family:"Trebuchet MS";
-font-size:20px;
-}
+	INPUT#box
+	{
+                font-family:"Trebuchet MS";
+                font-size:16px;
+        }
+
+	INPUT:focus
+	{
+		border: 3px solid green;
+	}	
+
+	body
+	{	
+                font-family:"Trebuchet MS";
+		background-color:#d0e4fe;
+	}
+	
+	h1
+	{
+		
+                font-family:"Trebuchet MS";
+		text-align:center;
+	}
+
+	p
+	{
+		text-align:center;
+		font-family:"Trebuchet MS";
+		font-size:20px;
+	}
 </style>
 
 
@@ -37,10 +53,11 @@ font-size:20px;
 		<td>
 		<table align="center">
 			<tr>
-			<td><input type="text" name="claim" value="Claim" size=20>
+			<td><input type="Text" class="box" name="claim" value="Enter Your Claim" size=20>
 			</tr>
+			<br>
 			<tr>
-			<td><input type="text" name="assertions" value="Assertions" size=20>
+			<td><input type="Text" class="box" name="assertions" value="Assertions" size=20>
 			</tr>
 			<tr>
 			<td><input type="submit" name="Submit" value="submit">
