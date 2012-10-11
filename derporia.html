@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<head>
 <!DOCTYPE html>
 
 <!-- A project by James Dressel and James Robertson -->
@@ -93,7 +93,7 @@ function resetForm(){
 
 
 </script>
-
+</head>
 <html>
 	<body>
 
@@ -143,145 +143,3 @@ function resetForm(){
 
 
 </html>
-=======
-<!DOCTYPE html>
-
-<!-- A project by James Dressel and James Robertson -->
-<style>
-	input
-	{
-                font-family:"Trebuchet MS";
-                font-size:16px;
-        }
-	
-	textarea
-	{
-                font-family:"Trebuchet MS";
-                font-size:16px;
-        }
-
-	textarea:focus
-	{
-		border: 3px solid green;
-	}
-	
-	body
-	{	
-                font-family:"Trebuchet MS";
-		background-color:#d0e4fe;
-	}
-	
-	h1
-	{
-		
-                font-family:"Trebuchet MS";
-		text-align:center;
-	}
-
-	p
-	{
-		text-align:center;
-		font-family:"Trebuchet MS";
-		font-size:20px;
-	}
-
-
-</style>
-
-
-<script>
-function validateClaim(){
-	var input=document.forms["assertionForm"]["claim"].value;
-	if (input==null || input=="")
-	{
-
-	return false;
-	} else {
-		return true;
-	}
-}
-function validateAssertions(){
-	var input=document.forms["assertionForm"]["assertions"].value;
-	if (input==null || input=="")
-  	{
-
-		return false;
-	} else {
-		return true;
-	}
-}
-function validateForm(){
-	var claim = validateClaim();
-	var assertion = validateAssertions();
-	if(claim&&assertion){
-		document.forms["assertionForm"]["Submit"].disabled=true;
-		return true;
-	} else {
-		if(claim){
-		//Claim present, no assertion
-			alert("An assertion must be entered.");
-		} else if (assertion) {
-		//Assertion present, no claim
-			alert("A claim must be entered.");
-		} else {
-			alert("Both a claim and an assertion must be entered.");
-		}
-	return false;
-	}
-}
-
-function resetForm(){
-}
-
-
-</script>
-
-<html>
-	<body>
-
-	<h1>Derporia: the never-ending land of <del>baseless</del> claims</h1>
-	
-	<hr>
-
-	<br>
-	
-	<p>
-		Please enter make a claim and then assertions to support your claim. 
-	</p>
-
-	<table border=1 align="center">
-	<tr>
-		<td>
-		<form name="assertionForm" onsubmit="return validateForm()" method="post" action="http://cs.gmu.edu:8080/offutt/servlet/formHandler">
-
-			<textarea autofocus="autofocus" cols="30" rows="1" name="claim">Enter your claim</textarea>
-		<br>
-			<textarea cols="30" rows="5" name="assertions" size=20>Enter your assertions</textarea>
-		<br>
-			<button type="submit" onclick="resetForm()" align="right">Reset</button> <input type="submit" name="Submit" value="submit" align="right"> 
-
-
-		</form>
-	</tr>
-	</table>
-	<br>
-	<table border=1 align="center">
-	<tr>
-		<td>
-			<input type="submit" name="Convinced" value="convinced">
-
-			<input type="submit" name="Disagree" value="disagree">
-
-			<input type="submit" name="Unsure" value="unsure">
-	</tr>
-	</table>
-	<p>
-		<ul>
-			<li>Page disables the submit button after valid input has been entered. </li>
-		</ul>
-	</p>
-	</body>
-
-
-</html>
->>>>>>> 3a8263ec66280d1057817f88bb15972607f524f9
