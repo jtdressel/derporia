@@ -66,6 +66,7 @@ function validateForm(){
 	var claim = validateClaim();
 	var assertion = validateAssertions();
 	if(claim&&assertion){
+		document.forms["assertionForm"]["Submit"].disabled=true;
 		return true;
 	} else {
 		if(claim){
