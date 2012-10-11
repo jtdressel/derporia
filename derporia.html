@@ -38,6 +38,8 @@
 		font-family:"Trebuchet MS";
 		font-size:20px;
 	}
+
+
 </style>
 
 
@@ -82,6 +84,8 @@ function validateForm(){
 	}
 }
 
+function resetForm(){
+}
 
 
 </script>
@@ -108,7 +112,8 @@ function validateForm(){
 		<br>
 			<textarea cols="30" rows="5" name="assertions" size=20>Enter your assertions</textarea>
 		<br>
-			<input type="submit" name="Submit" value="submit">
+			<input type="submit" name="Submit" value="submit"> <button type="button" onclick="resetForm()">Reset</button>
+
 
 		</form>
 	</tr>
@@ -124,6 +129,11 @@ function validateForm(){
 			<input type="submit" name="Unsure" value="unsure">
 	</tr>
 	</table>
+	<p>
+		<ul>
+			<li>Page disables the submit button after valid input has been entered. </li>
+		</ul>
+	</p>
 	</body>
 
 
