@@ -85,6 +85,9 @@ function validateForm(){
 }
 
 function resetForm(){
+	document.forms["assertionForm"]["claim"].value="Enter your claim";
+	document.forms["assertionForm"]["assertions"].value="Enter your assertions";
+	document.forms["assertionForm"]["Submit"].disabled=false;
 }
 
 
@@ -132,6 +135,7 @@ function resetForm(){
 	<p>
 		<ul>
 			<li>Page disables the submit button after valid input has been entered. </li>
+			<li>Reset button resets values of inputs, and en-ables buttons.</li>
 		</ul>
 	</p>
 	</body>
