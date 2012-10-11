@@ -8,6 +8,7 @@ function isEmpty(field){
 }
 
 function validateForm(){
+	/*Check that fields are not empty, and have been changed*/
 	var claim = (!isEmpty(document.forms["assertionForm"]["claim"].value)&&!document.forms["assertionForm"]["claim"].value=="Enter your claim");
 	var assertion = (!isEmpty(document.forms["assertionForm"]["assertions"].value&&!document.forms["assertionForm"]["assertions"].value=="Enter your assertions"));
 	if(claim&&assertion){
