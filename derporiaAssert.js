@@ -8,8 +8,8 @@ function isEmpty(field){
 }
 
 function validateForm(){
-	var claim = !isEmpty(document.forms["assertionForm"]["claim"].value);
-	var assertion = !isEmpty(document.forms["assertionForm"]["assertions"].value);
+	var claim = (!isEmpty(document.forms["assertionForm"]["claim"].value)&&!document.forms["assertionForm"]["claim"].value=="Enter your claim");
+	var assertion = (!isEmpty(document.forms["assertionForm"]["assertions"].value&&!document.forms["assertionForm"]["assertions"].value=="Enter your assertions"));
 	if(claim&&assertion){
 		document.forms["assertionForm"]["Submit"].disabled=true;
 		return true;
