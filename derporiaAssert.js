@@ -33,3 +33,15 @@ function resetForm(){
 	document.forms["assertionForm"]["assertions"].value="Enter your assertions";
 	document.forms["assertionForm"]["Submit"].disabled=false;
 }
+
+function clearOnClick(field, defaultText){
+	if(field.value === defaultText){
+		field.value="";
+	}
+}
+
+function defaultOnBlur(field, defaultText){
+	if(field.value == ""){
+		field.value = defaultText;
+	}
+}
