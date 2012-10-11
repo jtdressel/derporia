@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <title>Derporia</title>
 <!-- A project by James Dressel and James Robertson -->
@@ -50,45 +51,17 @@ function validateClaim(){
 	var input=document.forms["assertionForm"]["claim"].value;
 	if (input==null || input=="")
 	{
+=======
+<head>
+<title>Derporia: the never-ending land of <del>baseless</del> claims</title>
 
-	return false;
-	} else {
-		return true;
-	}
-}
-function validateAssertions(){
-	var input=document.forms["assertionForm"]["assertions"].value;
-	if (input==null || input=="")
-  	{
-
-		return false;
-	} else {
-		return true;
-	}
-}
-function validateForm(){
-	var claim = validateClaim();
-	var assertion = validateAssertions();
-	if(claim&&assertion){
-		return true;
-	} else {
-		if(claim){
-		//Claim present, no assertion
-			alert("An assertion must be entered.");
-		} else if (assertion) {
-		//Assertion present, no claim
-			alert("A claim must be entered.");
-		} else {
-			alert("Both a claim and an assertion must be entered.");
-		}
-	return false;
-	}
-}
+<!-- A project by James Dressel and James Robertson -->
+<link rel="stylesheet" type="text/css" href="derporiaStyle.css" />
+>>>>>>> 4aef86f673629080bcc4005baeb49e9884196832
 
 
-
-</script>
-
+<script src="derporiaAssert.js"> </script>
+</head>
 <html>
 	<body>
 
@@ -105,13 +78,14 @@ function validateForm(){
 	<table border=1 align="center">
 	<tr>
 		<td>
-		<form name="assertionForm" action = "derp" onsubmit="return validateForm()"><!--NEED TODO -->
+		<form name="assertionForm" onsubmit="return validateForm()" method="post" action="http://cs.gmu.edu:8080/offutt/servlet/formHandler">
 
 			<textarea autofocus="autofocus" cols="30" rows="1" name="claim">Enter your claim</textarea>
 		<br>
 			<textarea cols="30" rows="5" name="assertions" size=20>Enter your assertions</textarea>
 		<br>
-			<input type="submit" name="Submit" value="submit">
+			<button type="button" onclick="resetForm()">Reset</button> <input type="submit" name="Submit" value="submit">
+
 
 		</form>
 	</tr>
@@ -127,6 +101,12 @@ function validateForm(){
 			<input type="submit" name="Unsure" value="unsure">
 	</tr>
 	</table>
+	<p>
+		<ul>
+			<li>Page disables the submit button after valid input has been entered. </li>
+			<li>Reset button resets values of inputs, and en-ables buttons.</li>
+		</ul>
+	</p>
 	</body>
 
 
