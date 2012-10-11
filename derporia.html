@@ -2,17 +2,23 @@
 
 <!-- A project by James Robertson and James Dressel -->
 <style>
-	INPUT#box
+	input
+	{
+                font-family:"Trebuchet MS";
+                font-size:16px;
+        }
+	
+	textarea
 	{
                 font-family:"Trebuchet MS";
                 font-size:16px;
         }
 
-	INPUT:focus
+	textarea:focus
 	{
 		border: 3px solid green;
-	}	
-
+	}
+	
 	body
 	{	
                 font-family:"Trebuchet MS";
@@ -51,20 +57,18 @@
 	<table border=1 align="center">
 	<tr>
 		<td>
-		<table align="center">
-			<tr>
-			<td><input type="Text" class="box" name="claim" value="Enter Your Claim" size=20>
-			</tr>
-			<br>
-			<tr>
-			<td><input type="Text" class="box" name="assertions" value="Assertions" size=20>
-			</tr>
-			<tr>
-			<td><input type="submit" name="Submit" value="submit">
-			</tr>
-		</table>
+		<form action = "derp"><!--NEED TODO -->
+
+			<textarea autofocus="autofocus" cols="30" rows="1" name="claim">Enter your claim</textarea>
+		<br>
+			<textarea cols="30" rows="5" name="assertions" size=20>Enter your assertions</textarea>
+		<br>
+			<input type="submit" name="Submit" value="submit">
+
+		</form>
 	</tr>
 	</table>
+
 
 	</body>
 
