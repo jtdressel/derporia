@@ -43,21 +43,22 @@
 
 <script>
 function validateClaim(){
-var x=document.forms["assertionForm"]["claim"].value;
-if (x==null || x=="")
-  {
-  alert("A claim must be entered.");
-  return false;
-  }
+	var input=document.forms["assertionForm"]["claim"].value;
+	if (input==null || input=="")
+	{
+		alert("A claim must be entered.");
+	return false;
+	}
 }
 function validateAssertions(){
-var x=document.forms["assertionForm"]["assertions"].value;
-if (x==null || x=="")
-  {
-  alert("An assertion must be entered.");
-  return false;
-  }
+	var input=document.forms["assertionForm"]["assertions"].value;
+	if (input==null || input=="")
+  	{
+  	alert("An assertion must be entered.");
+		return false;
+	}
 }
+
 
 
 
