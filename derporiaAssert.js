@@ -1,3 +1,4 @@
+/*James Dressel and James Robertson*/
 function validateClaim(){
 	var input=document.forms["assertionForm"]["claim"].value;
 	if (input==null || input=="")
