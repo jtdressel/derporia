@@ -46,19 +46,40 @@ function validateClaim(){
 	var input=document.forms["assertionForm"]["claim"].value;
 	if (input==null || input=="")
 	{
-		alert("A claim must be entered.");
+
 	return false;
+	} else {
+		return true;
 	}
 }
 function validateAssertions(){
 	var input=document.forms["assertionForm"]["assertions"].value;
 	if (input==null || input=="")
   	{
-  	alert("An assertion must be entered.");
+
 		return false;
+	} else {
+		return true;
 	}
 }
-
+function validateForm(){
+	var claim = validateClaim();
+	var assertion = validateAssertions();
+	if(claim&&assertion){
+		return true;
+	} else {
+		if(claim){
+		//Claim present, no assertion
+			alert("An assertion must be entered.");
+		} else if (assertion) {
+		//Assertion present, no claim
+			alert("A claim must be entered.");
+		} else {
+			alert("Both a claim and an assertion must be entered.");
+		}
+	return false;
+	}
+}
 
 
 
@@ -80,7 +101,7 @@ function validateAssertions(){
 	<table border=1 align="center">
 	<tr>
 		<td>
-		<form name="assertionForm" action = "derp" onsubmit="return validateAssertions()"><!--NEED TODO -->
+		<form name="assertionForm" action = "derp" onsubmit="return validateForm()"><!--NEED TODO -->
 
 			<textarea autofocus="autofocus" cols="30" rows="1" name="claim">Enter your claim</textarea>
 		<br>
