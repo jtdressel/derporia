@@ -46,11 +46,18 @@ function validateClaim(){
 var x=document.forms["assertionForm"]["claim"].value;
 if (x==null || x=="")
   {
-  alert("A claim must be entered");
+  alert("A claim must be entered.");
   return false;
   }
 }
-
+function validateAssertions(){
+var x=document.forms["assertionForm"]["assertions"].value;
+if (x==null || x=="")
+  {
+  alert("An assertion must be entered.");
+  return false;
+  }
+}
 
 
 
@@ -72,7 +79,7 @@ if (x==null || x=="")
 	<table border=1 align="center">
 	<tr>
 		<td>
-		<form name="assertionForm" action = "derp" onsubmit="return validateClaim()"><!--NEED TODO -->
+		<form name="assertionForm" action = "derp" onsubmit="return validateAssertions()"><!--NEED TODO -->
 
 			<textarea autofocus="autofocus" cols="30" rows="1" name="claim">Enter your claim</textarea>
 		<br>
