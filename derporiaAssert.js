@@ -1,27 +1,15 @@
 /*James Dressel and James Robertson*/
-function validateClaim(){
-	var input=document.forms["assertionForm"]["claim"].value;
-	if (input==null || input=="")
-	{
-
-	return false;
-	} else {
+function isEmpty(field){
+	if(field==null || field==""){
 		return true;
-	}
-}
-function validateAssertions(){
-	var input=document.forms["assertionForm"]["assertions"].value;
-	if (input==null || input=="")
-  	{
-
+	} else {
 		return false;
-	} else {
-		return true;
 	}
 }
+
 function validateForm(){
-	var claim = validateClaim();
-	var assertion = validateAssertions();
+	var claim = !isEmpty(document.forms["assertionForm"]["claim"].value);
+	var assertion = !isEmpty(document.forms["assertionForm"]["assertions"].value);
 	if(claim&&assertion){
 		document.forms["assertionForm"]["Submit"].disabled=true;
 		return true;
