@@ -22,9 +22,9 @@
 		<td>
 		<form name="assertionForm" onsubmit="return validateForm()" method="post" action="http://cs.gmu.edu:8080/offutt/servlet/formHandler">
 
-			<textarea cols="30" rows="1" name="claim" value="Enter your claim" onclick="clearOnClick(this, 'Enter your claim')" onblur="defaultOnBlur(this, 'Enter your claim')" autofocus="autofocus">Enter your claim</textarea>
+			<textarea cols="30" rows="1" name="claim" onclick="clearOnClick(this, 'Enter your claim')" onblur="defaultOnBlur(this, 'Enter your claim')" autofocus="autofocus">Enter your claim</textarea>
 		<br>
-			<textarea cols="30" rows="5" name="assertions" size=20 value="Enter your assertions" onclick="clearOnClick(this, 'Enter your assertions')" onblur="defaultOnBlur(this, 'Enter your assertions')">Enter your assertions</textarea>
+			<textarea cols="30" rows="5" name="assertions" size=20 onclick="clearOnClick(this, 'Enter your assertions')" onblur="defaultOnBlur(this, 'Enter your assertions')">Enter your assertions</textarea>
 		<br>
 			<button type="button" onclick="resetForm()">Reset</button> <input type="submit" name="Submit" value="submit">
 
