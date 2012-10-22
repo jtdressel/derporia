@@ -1,11 +1,11 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<meta charset="UTF-8" />
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <title>Derporia: the never-ending land of claims</title>
 
 <!-- A project by James Dressel and James Robertson -->
-<link rel="stylesheet" type="text/css" href="derporiaStyle.css" />
+<link rel="stylesheet" type="text/css" href="derporiaStyle.css">
 
 <script src="derporiaAssert.js"> </script>
 </head>
@@ -17,37 +17,60 @@
 	<p>
 		Please enter make a claim and then assertions to support your claim. 
 	</p>
-	<table border=1 class="center">
-	<tr>
+	<table class="center" border="1">
+	<tbody><tr>
 		<td>
 		<form name="assertionForm" onsubmit="return validateForm()" method="post" action="http://cs.gmu.edu:8080/offutt/servlet/formHandler">
 
 			<textarea cols="30" rows="1" name="claim" onclick="clearOnClick(this, 'Enter your claim')" onblur="defaultOnBlur(this, 'Enter your claim')" autofocus="autofocus">Enter your claim</textarea>
 		<br>
-			<textarea cols="30" rows="5" name="assertions" size=20 onclick="clearOnClick(this, 'Enter your assertions')" onblur="defaultOnBlur(this, 'Enter your assertions')">Enter your assertions</textarea>
+			<textarea cols="30" rows="5" name="assertions" size="20" onclick="clearOnClick(this, 'Enter your assertions')" onblur="defaultOnBlur(this, 'Enter your assertions')">Enter your assertions</textarea>
 		<br>
-			<button type="button" onclick="resetForm()">Reset</button> <input type="submit" name="Submit" value="submit">
+		</form></td>
+		</tr></tbody></table><table align="center" width="14%">
+		<tbody><tr>
+		<td align="left">
+			<button type="button" onclick="resetForm()">Reset</button> 
+		</td>
+		<td align="right">
+			<input name="Submit" value="Submit" type="submit">
+		</td>
+		</tr>
+		</tbody></table>
 
 
-		</form>
-	</tr>
-	</table>
+		
+	
+	
 	<br>
-	<table border=1 class="center">
-	<tr>
+	<table class="center" border="1">
+	<tbody><tr>
 		<td>
-			
-			<button type="button" name="convinced">Convinced</button> 
-			<button type="button" name="disagree">Disagree</button> 
-			<button type="button" name="unsure">Unsure</button> 
+		<table width="100%">
+			<tbody><tr>
+			<td align="left">
+				<button type="button" name="disagree">Disagree</button> 
+			</td>
+			<td align="center">
+				<button type="button" name="unsure">Unsure</button> 
+			</td>
+			<td align="right">
+				<button type="button" name="convinced">Convinced</button> 
+			</td>
+			</tr>
+		</tbody></table>
+		</td>
 	</tr>
-	</table>
+	</tbody></table>
 	<ul>
 		<li>Submit validates input by making sure the text boxes are not empty, and that they have changed.</li>
 		<li>Page disables the submit button after valid input has been entered. </li>
 		<li>Reset button resets values of inputs, and enables buttons.</li>
-		<li>Clears and restores the default value of text fields when appropriate. (I was unsure if the disabling was too simple to be counted)</li>
+		<li>Clears and restores the default value of text fields when 
+appropriate. (I was unsure if the disabling was too simple to be 
+counted)</li>
 	</ul>
 	
-	</body>
-</html>
+	
+
+</body></html>
